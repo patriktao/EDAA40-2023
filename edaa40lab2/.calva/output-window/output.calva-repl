@@ -1,0 +1,181 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Using host:port 127.0.0.1:62839 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉edaa40.user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉edaa40.user꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: page-rank in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab2/src/edaa40/lab2.clj:172:1) 
+clj꞉edaa40.lab2꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: page-rank in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab2/src/edaa40/lab2.clj:172:1) 
+clj꞉edaa40.lab2꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: page-rank in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab2/src/edaa40/lab2.clj:172:1) 
+clj꞉edaa40.lab2꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: page-rank in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab2/src/edaa40/lab2.clj:172:1) 
+clj꞉edaa40.lab2꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: defn in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab2/src/edaa40/lab2.clj:9:1) 
+clj꞉edaa40.lab2꞉> 
+nil
+clj꞉edaa40.lab2꞉> 
+nil
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/test?
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/dom
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/rng
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/image-of
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/TinyWeb
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/alpha
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/all-pages
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/all-pages
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/no-links?
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/random-page
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/random-link
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/surf
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/random-surfer
+clj꞉edaa40.lab2꞉> 
+#'edaa40.lab2/page-rank
+clj꞉edaa40.lab2꞉> 
+{0 0.08149, 1 0.28943, 3 0.25038, 2 0.3787}
+clj꞉edaa40.lab2꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: defn in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab3/src/edaa40/lab3.clj:69:1) 
+clj꞉edaa40.lab3꞉> 
+nil
+clj꞉edaa40.lab3꞉> 
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/test?
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/winning-lines
+clj꞉edaa40.lab3꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: _ in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab3/src/edaa40/lab3.clj:48:1) 
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/X
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/O
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/_
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B0
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B1
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B2
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/threeinarow
+clj꞉edaa40.lab3꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:153)
+clj꞉edaa40.lab3꞉> 
+threeinarow 1 : ERROR
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 3 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 1 : ERROR
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/threeinarow
+clj꞉edaa40.lab3꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:153)
+clj꞉edaa40.lab3꞉> 
+threeinarow 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 3 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: defn in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab1/src/edaa40/lab1.clj:81:1) 
+clj꞉edaa40.lab1꞉> 
+nil
+clj꞉edaa40.lab1꞉> 
+nil
+clj꞉edaa40.lab1꞉> 
+#'edaa40.lab1/test?
+clj꞉edaa40.lab1꞉> 
+#'edaa40.lab1/rng
+clj꞉edaa40.lab1꞉> 
+#'edaa40.lab1/image-of
+clj꞉edaa40.lab1꞉> 
+#'edaa40.lab1/image-of
+clj꞉edaa40.lab1꞉> 
+image-of 1 : passed
+nil
+clj꞉edaa40.lab1꞉> 
+image-of 2 : passed
+nil
+clj꞉edaa40.lab1꞉> 
+image-of 3 : passed
+nil
+clj꞉edaa40.lab1꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: win? in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab3/src/edaa40/lab3.clj:105:17) 
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/win?
+clj꞉edaa40.lab3꞉> 
+; ArityException Wrong number of args (0) passed to: PersistentVector  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉edaa40.lab3꞉> 
+; ArityException Wrong number of args (0) passed to: PersistentVector  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/win?
+clj꞉edaa40.lab3꞉> 
+win? 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+win? 2 : ERROR
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/win?
+clj꞉edaa40.lab3꞉> 
+; ArityException Wrong number of args (2) passed to: core/some?  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉edaa40.lab3꞉> 
+; ArityException Wrong number of args (2) passed to: core/some?  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/win?
+clj꞉edaa40.lab3꞉> 
+win? 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+win? 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/opponent
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab1/cartesian
+clj꞉edaa40.lab1꞉> 
+#object[edaa40.lab1$cartesian 0x39944ea2 "edaa40.lab1$cartesian@39944ea2"]
+clj꞉edaa40.lab1꞉> 

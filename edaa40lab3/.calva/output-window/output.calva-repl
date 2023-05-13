@@ -1,0 +1,266 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/patriktao/EDAA40-Discrete Structures/edaa40lab3 ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:52902 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉edaa40.user꞉>  ; Use `alt+enter` to evaluate
+clj꞉edaa40.user꞉> 
+; Jack-in done.
+clj꞉edaa40.user꞉> 
+; IllegalAccessError square? does not exist  clojure.core/refer (core.clj:4097)
+clj꞉edaa40.lab4꞉> 
+nil
+clj꞉edaa40.lab3꞉> 
+nil
+clj꞉edaa40.lab3꞉> 
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/test?
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/winning-lines
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/X
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/O
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/O
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/_
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B0
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B1
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B2
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/threeinarow
+clj꞉edaa40.lab3꞉> 
+threeinarow 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+threeinarow 3 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/win?
+clj꞉edaa40.lab3꞉> 
+win? 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+win? 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/opponent
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/moves
+clj꞉edaa40.lab3꞉> 
+moves 1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+moves 2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+moves 3 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/gametree
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B0-GT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B1-GT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B2-GT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/gametree-count
+clj꞉edaa40.lab3꞉> 
+gametree-count B0 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+gametree-count B1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+gametree-count B2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/reduce-gametree
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B0-RGT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B1-RGT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B2-RGT
+clj꞉edaa40.lab3꞉> 
+reduce-gametree count B0 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+reduce-gametree count B1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+reduce-gametree count B2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/gametree-height
+clj꞉edaa40.lab3꞉> 
+height B0-GT : passed
+nil
+clj꞉edaa40.lab3꞉> 
+height B1-GT : passed
+nil
+clj꞉edaa40.lab3꞉> 
+height B2-GT : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/choose-maxheight-gametrees
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/choose-minheight-gametrees
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/optimal-gametree-reduced
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/optimal-gametree
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B0-OGT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B1-OGT
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/B2-OGT
+clj꞉edaa40.lab3꞉> 
+optimal-gametree count B0 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+optimal-gametree count B1 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+optimal-gametree count B2 : passed
+nil
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/rand-moves
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/print-board
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/print-boards
+clj꞉edaa40.lab3꞉> 
+#'edaa40.lab3/print-gametree-top
+clj꞉edaa40.lab3꞉> 
+_ _ _
+_ _ _
+_ _ _
+----------
+X _ _
+_ _ _
+_ _ _
+----------
+X _ _
+_ O _
+_ _ _
+----------
+X _ _
+_ O _
+_ X _
+----------
+X _ _
+_ O O
+_ X _
+----------
+X _ _
+X O O
+_ X _
+----------
+X _ _
+X O O
+O X _
+----------
+X _ X
+X O O
+O X _
+----------
+X O X
+X O O
+O X _
+----------
+X O X
+X O O
+O X X
+----------
+nil
+clj꞉edaa40.lab3꞉> 
+_ O _
+_ X _
+_ _ _
+----------
+X O _
+_ X _
+_ _ _
+----------
+X O _
+_ X _
+_ _ O
+----------
+X O _
+_ X _
+X _ O
+----------
+X O _
+_ X _
+X O O
+----------
+X O X
+_ X _
+X O O
+----------
+nil
+clj꞉edaa40.lab3꞉> 
+O _ _
+_ X _
+_ _ _
+----------
+O _ _
+_ X _
+X _ _
+----------
+O _ O
+_ X _
+X _ _
+----------
+O X O
+_ X _
+X _ _
+----------
+O X O
+_ X _
+X O _
+----------
+O X O
+X X _
+X O _
+----------
+O X O
+X X O
+X O _
+----------
+O X O
+X X O
+X O X
+----------
+nil
+clj꞉edaa40.lab3꞉> 

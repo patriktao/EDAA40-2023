@@ -1,0 +1,153 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/patriktao/EDAA40-Discrete Structures/edaa40lab4 ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:53466 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉edaa40.user꞉>  ; Use `alt+enter` to evaluate
+clj꞉edaa40.user꞉> 
+; Jack-in done.
+clj꞉edaa40.user꞉> 
+nil
+clj꞉edaa40.lab4꞉> 
+nil
+clj꞉edaa40.lab4꞉> 
+nil
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/create-square-sum-relation
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/H
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/H'
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/next-positions
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/create-knights-move-relation
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/square-sum-sequence?
+clj꞉edaa40.lab4꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: board in this context, compiling:(/Users/patriktao/EDAA40-Discrete Structures/edaa40lab4/src/edaa40/lab4.clj:52:21) 
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/board
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/knights-tour?
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/create-square-sum-relation
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/create-square-sum-relation
+clj꞉edaa40.lab4꞉> 
+create-square-sum-relation 1 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+create-square-sum-relation 2 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+create-square-sum-relation 3 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/square-sum-sequence
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/H'
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/H
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/add-move
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/Moves
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/board
+clj꞉edaa40.lab4꞉> 
+; IllegalStateException Attempting to call unbound fn: #'edaa40.lab4/next-positions  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+clj꞉edaa40.lab4꞉> 
+; IllegalStateException Attempting to call unbound fn: #'edaa40.lab4/next-positions  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+clj꞉edaa40.lab4꞉> 
+; IllegalStateException Attempting to call unbound fn: #'edaa40.lab4/next-positions  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/board
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/Moves
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/add-move
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/next-positions
+clj꞉edaa40.lab4꞉> 
+next-positions 1 : ERROR -- got' nil ', expected ' #{[2 1] [1 2]} '
+nil
+clj꞉edaa40.lab4꞉> 
+next-positions 2 : ERROR -- got' nil ', expected ' #{} '
+nil
+clj꞉edaa40.lab4꞉> 
+next-positions 3 : ERROR -- got' nil ', expected ' #{[1 1] [4 2] [1 5] [0 2] [0 4] [3 1] [4 4] [3 5]} '
+nil
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/next-positions
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/add-move
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/Moves
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/board
+clj꞉edaa40.lab4꞉> 
+next-positions 1 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+next-positions 2 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+next-positions 3 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+; IllegalStateException Attempting to call unbound fn: #'edaa40.lab4/create-knights-move-relation  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+clj꞉edaa40.lab4꞉> 
+; IllegalStateException Attempting to call unbound fn: #'edaa40.lab4/create-knights-move-relation  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/create-knights-move-relation
+clj꞉edaa40.lab4꞉> 
+create-knights-move-relation 1 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+create-knights-move-relation 2 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+create-knights-move-relation 3 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+create-knights-move-relation 4 : passed
+nil
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/knights-tour
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+#'edaa40.lab4/knights-tour
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 
+; AssertionError Assert failed: (not (contains? (set P) a))  edaa40.lab4/H' (form-init9119423559667442347.clj:92)
+clj꞉edaa40.lab4꞉> 

@@ -1,0 +1,2 @@
+lein test
+ (print-boards (rand-moves B0-OGT))

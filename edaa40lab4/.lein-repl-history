@@ -1,0 +1,9 @@
+(use 'edaa40.lab4 :reload)
+ls
+lein test
+(use 'edaa40.lab4 :reload)
+lein test
+(use 'edaa40.lab4 :reload)
+(square-sum-sequence 15)
+(use 'edaa40.lab4 :reload)
+     (use 'edaa40.lab4 :reload)

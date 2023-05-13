@@ -1,0 +1,15 @@
+use 'edaa40.lab2 :reload
+lein test
+exit
+(page-rank TinyWeb 100000)
+exit
+(page-rank TinyWeb 100000)
+exit
+(page-rank TinyWeb 100000)
+(use 'edaa40.lab2 :reload)
+(page-rank TinyWeb 100000)
+(use lab2.clj:reload)
+(use lab2.clj :reload)
+(use 'lab2.clj :reload)
+(use 'edaa40.lab2 :reload)
+(page-rank TinyWeb 100000)
