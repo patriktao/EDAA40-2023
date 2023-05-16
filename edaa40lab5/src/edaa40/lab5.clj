@@ -381,28 +381,19 @@
 
   [propositions valuations formula]
 
-  ; [a], {}, T
-  ; Is it empty? No, then continue
-  ; Does it only have one propositions?
-  ;    -> If yes, we evaluate the proposition p using the formula when {p 0} and {p 1}, and append these evaluations into a result list.
-  ;    -> If no, then we go through each proposition recursively 
+  (if (and (empty? propositions) (empty? valuations)) ;; 
+    (list (list (eval-formula binary-boolean-algebra valuations formula)))) ;; ifall vi det inte finns några ['a,'b] och inga evaluations -> vi returnerar
+  (if (empty? propositions)
+    (list (eval-formula binary-boolean-algebra valuations formula)) ;;base-line för rekursionen, vi har gått igenom alla [a', b']. Returnera evalueringen
+    (let [result
+          (for [value [0 1]] ;; Varje proposition kan vara både 1 och 0
+            (let [sub-result (binary-truth-table-with-valuations
+                              (rest propositions) ;; t.ex. vi har t.ex. gått igenom 'a och vi har 'b och 'c som återstår
+                              (assoc valuations (first propositions) value) ;;Här appendar vi evaluering t.ex. {'a 0} -> {'a 0 b' 1}
+                              formula)]
+              (cons value sub-result)))] ;;i varje rekursion bygger vi på med nuvarande värdet (0 eller 1) och värden djupare i rekursionen.
+      result))
 
-
-  (if (and (empty? propositions) (empty? valuations))
-    (list (list (eval-formula binary-boolean-algebra valuations formula)))
-    (if (empty? propositions)
-      (list (eval-formula binary-boolean-algebra valuations formula))
-      (let [result
-            (for [value [0 1]]
-              (let [sub-result (binary-truth-table-with-valuations
-                                (rest propositions)
-                                (assoc valuations (first propositions) value)
-                                formula)]
-                (cons value sub-result)))]
-        result)))
-
-
-   ;; (for [a A b B] [a b])
 
    ;; This was about ten lines for me.  The function is recursive, and each recursion step should
    ;; remove `(first propositions)` and then pass `(rest propositions)` to the next recursion step.  Thus,
@@ -415,10 +406,6 @@
    ;; See `binary-truth-table` for more information on the output format.
 
    ;; How many output lists do you need to produce for 1, 2, 3, 4, ... propositions?
-
-  ;;(if (empty? propositions)
-  ;;  (list valuations)
-  ;;  (for [v propositions] (binary-truth-table-with-valuations (rest propositions) (assoc valuations (first propositions) propositions) formula))) 
   )
 
 (defn binary-truth-table
