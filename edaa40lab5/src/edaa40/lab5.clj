@@ -381,17 +381,14 @@
 
   [propositions valuations formula]
 
-  (if (and (empty? propositions) (empty? valuations)) ;; 
-    (list (list (eval-formula binary-boolean-algebra valuations formula)))) ;; ifall vi det inte finns några ['a,'b] och inga evaluations -> vi returnerar
   (if (empty? propositions)
-    (list (eval-formula binary-boolean-algebra valuations formula)) ;;base-line för rekursionen, vi har gått igenom alla [a', b']. Returnera evalueringen
+    (list (list (eval-formula binary-boolean-algebra valuations formula))) ;;base-line för rekursionen, vi har gått igenom alla [a', b']. Returnera evalueringen
     (let [result
-          (for [value [0 1]] ;; Varje proposition kan vara både 1 och 0
-            (let [sub-result (binary-truth-table-with-valuations
-                              (rest propositions) ;; t.ex. vi har t.ex. gått igenom 'a och vi har 'b och 'c som återstår
-                              (assoc valuations (first propositions) value) ;;Här appendar vi evaluering t.ex. {'a 0} -> {'a 0 b' 1}
-                              formula)]
-              (cons value sub-result)))] ;;i varje rekursion bygger vi på med nuvarande värdet (0 eller 1) och värden djupare i rekursionen.
+          (for [value [0 1] sub-result (binary-truth-table-with-valuations
+                                        (rest propositions) ;; t.ex. vi har t.ex. gått igenom 'a och vi har 'b och 'c som återstår
+                                        (assoc valuations (first propositions) value) ;;Här appendar vi evaluering t.ex. {'a 0} -> {'a 0 b' 1}
+                                        formula)]
+            (cons value sub-result))] ;;i varje rekursion bygger vi på med nuvarande värdet (0 eller 1) och värden djupare i rekursionen.
       result))
 
 

@@ -10,7 +10,7 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd /Users/patriktao/GitHub/EDAA40-2023/edaa40lab5 ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:56998 ...
+; Using host:port 127.0.0.1:61680 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -36,8 +36,6 @@ clj꞉edaa40.lab5꞉> 
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/expand-or
 clj꞉edaa40.lab5꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: expand-implication in this context, compiling:(/Users/patriktao/GitHub/EDAA40-2023/edaa40lab5/src/edaa40/lab5.clj:110:29) 
-clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/expand-implication
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/substitute
@@ -50,9 +48,11 @@ clj꞉edaa40.lab5꞉> 
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/formula
 clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/binary-not
+#'edaa40.lab5/binary-T
 clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/binary-and
+#'edaa40.lab5/binary-F
+clj꞉edaa40.lab5꞉> 
+#'edaa40.lab5/binary-not
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/binary-and
 clj꞉edaa40.lab5꞉> 
@@ -72,6 +72,9 @@ clj꞉edaa40.lab5꞉> 
 truthtable-vacuous : passed
 nil
 clj꞉edaa40.lab5꞉> 
+truthtable-trivial : ERROR -- got' (1) ', expected ' ((1)) '
+nil
+clj꞉edaa40.lab5꞉> 
 truthtable-a : passed
 nil
 clj꞉edaa40.lab5꞉> 
@@ -79,6 +82,14 @@ truthtable-not-a : passed
 nil
 clj꞉edaa40.lab5꞉> 
 truthtable-<- : ERROR -- got' ((0 (0 1) (1 0)) (1 (0 1) (1 1))) ', expected ' ((0 0 1) (0 1 0) (1 0 1) (1 1 1)) '
+nil
+clj꞉edaa40.lab5꞉> 
+#'edaa40.lab5/binary-truth-table-with-valuations
+clj꞉edaa40.lab5꞉> 
+truthtable-trivial : passed
+nil
+clj꞉edaa40.lab5꞉> 
+truthtable-vacuous : ERROR -- got' ((0 (1)) (1 (1))) ', expected ' ((0 1) (1 1)) '
 nil
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/binary-truth-table-with-valuations
@@ -95,14 +106,11 @@ clj꞉edaa40.lab5꞉> 
 truthtable-not-a : passed
 nil
 clj꞉edaa40.lab5꞉> 
-truthtable-<- : ERROR -- got' ((0 (0 1) (1 0)) (1 (0 1) (1 1))) ', expected ' ((0 0 1) (0 1 0) (1 0 1) (1 1 1)) '
+truthtable-<- : passed
 nil
 clj꞉edaa40.lab5꞉> 
-; IllegalArgumentException Duplicate key: =  clojure.lang.PersistentArrayMap.createWithCheck (PersistentArrayMap.java:70)
-clj꞉edaa40.lab5꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: many-worlds-not in this context, compiling:(/Users/patriktao/GitHub/EDAA40-2023/edaa40lab5/src/edaa40/lab5.clj:484:1) 
-clj꞉edaa40.lab5꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: many-worlds in this context, compiling:(/Users/patriktao/GitHub/EDAA40-2023/edaa40lab5/src/edaa40/lab5.clj:481:3) 
+truthtable-3-vars : passed
+nil
 clj꞉edaa40.lab5꞉> 
 #'edaa40.lab5/many-worlds
 clj꞉edaa40.lab5꞉> 
@@ -116,59 +124,12 @@ clj꞉edaa40.lab5꞉> 
 many-worlds-not-a : passed
 nil
 clj꞉edaa40.lab5꞉> 
-many-worlds-a&c : ERROR -- got' nil ', expected ' #{E} '
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-implication-1 : ERROR -- got' nil ', expected ' #{D B C E} '
-nil
-clj꞉edaa40.lab5꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: many-worlds-and in this context, compiling:(/Users/patriktao/GitHub/EDAA40-2023/edaa40lab5/src/edaa40/lab5.clj:488:1) 
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-not
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-and
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-logic
-clj꞉edaa40.lab5꞉> 
 many-worlds-a&c : passed
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-not-a : passed
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-a : passed
-nil
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-logic
-clj꞉edaa40.lab5꞉> 
-many-worlds-a&c : passed
-nil
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-logic
-clj꞉edaa40.lab5꞉> 
-many-worlds-a&c : passed
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-implication-1 : ERROR -- got' nil ', expected ' #{D B C E} '
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-implication-2 : ERROR -- got' nil ', expected ' #{B E} '
-nil
-clj꞉edaa40.lab5꞉> 
-#'edaa40.lab5/many-worlds-logic
-clj꞉edaa40.lab5꞉> 
-many-worlds-implication-2 : passed
 nil
 clj꞉edaa40.lab5꞉> 
 many-worlds-implication-1 : passed
 nil
 clj꞉edaa40.lab5꞉> 
-many-worlds-a&c : passed
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-not-a : passed
-nil
-clj꞉edaa40.lab5꞉> 
-many-worlds-a : passed
+many-worlds-implication-2 : passed
 nil
 clj꞉edaa40.lab5꞉> 
