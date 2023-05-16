@@ -376,11 +376,33 @@
 
 (declare binary-truth-table-with-valuations)
 (defn binary-truth-table-with-valuations
-  "Recursively constructs a truth table by trying all combinations of all `propositions` set to `1` and `0`.  `valuations` carries
-   the intermediate result of binding propositions to values `1` and `0`.
+  "Recursively constructs a truth table by trying all combinations of all `propositions` set to `1` and `0`.  `valuations` carries the intermediate result of binding propositions to values `1` and `0`.
    See `binary-truth-table` (below) for a description of the output format."
 
   [propositions valuations formula]
+
+  ; [a], {}, T
+  ; Is it empty? No, then continue
+  ; Does it only have one propositions?
+  ;    -> If yes, we evaluate the proposition p using the formula when {p 0} and {p 1}, and append these evaluations into a result list.
+  ;    -> If no, then we go through each proposition recursively 
+
+
+  (if (and (empty? propositions) (empty? valuations))
+    (list (list (eval-formula binary-boolean-algebra valuations formula)))
+    (if (empty? propositions)
+      (list (eval-formula binary-boolean-algebra valuations formula))
+      (let [result
+            (for [value [0 1]]
+              (let [sub-result (binary-truth-table-with-valuations
+                                (rest propositions)
+                                (assoc valuations (first propositions) value)
+                                formula)]
+                (cons value sub-result)))]
+        result)))
+
+
+   ;; (for [a A b B] [a b])
 
    ;; This was about ten lines for me.  The function is recursive, and each recursion step should
    ;; remove `(first propositions)` and then pass `(rest propositions)` to the next recursion step.  Thus,
@@ -394,9 +416,10 @@
 
    ;; How many output lists do you need to produce for 1, 2, 3, 4, ... propositions?
 
-  (if (empty? propositions)
-    valuations
-    (for [v propositions] (binary-truth-table-with-valuations (rest propositions) (assoc valuations (first propositions) propositions) formula))))
+  ;;(if (empty? propositions)
+  ;;  (list valuations)
+  ;;  (for [v propositions] (binary-truth-table-with-valuations (rest propositions) (assoc valuations (first propositions) propositions) formula))) 
+  )
 
 (defn binary-truth-table
   "Constructs a truth table by trying all combinations of all `propositions` set to `1` and `0` in the input formula.
@@ -422,6 +445,7 @@
   (binary-truth-table-with-valuations propositions {} formula))
 
 ;; ;; Uncomment the tests:
+(binary-truth-table ['a, 'b] (formula (or a (not b))))
 (test? "truthtable-trivial" (binary-truth-table [] (formula T)) '((1)))
 (test? "truthtable-vacuous" (binary-truth-table ['a] (formula T)) '((0 1) (1 1)))
 (test? "truthtable-a" (binary-truth-table ['a] (formula a)) '((0 0) (1 1)))
@@ -463,47 +487,47 @@
 
   ;; IMPLEMENT ME:
 
-  {:T   ;; ?
-   :F   ;; ?
-   :and ;; ?
-   :or  ;; ?
+
+  {:T  1,
+   :F  0,
+   :and intersection,
+   :or  union,
    :not many-worlds-not})
 
 ;; ;; Uncomment the tests:
-;; (test? "many-worlds-a"
-;;        (eval-formula many-worlds-logic {'a #{'A 'E}
-;;                                         'b #{'B 'E}
-;;                                         'c #{'C 'E}}
-;;                      (formula a))
-;;        #{'A 'E})
+(test? "many-worlds-a"
+       (eval-formula many-worlds-logic {'a #{'A 'E}
+                                        'b #{'B 'E}
+                                        'c #{'C 'E}}
+                     (formula a))
+       #{'A 'E})
 
-;; (test? "many-worlds-not-a"
-;;        (eval-formula many-worlds-logic {'a #{'A 'E}
-;;                                         'b #{'B 'E}
-;;                                         'c #{'C 'E}}
-;;                      (formula (not a)))
-;;        #{'B 'C 'D})
+(test? "many-worlds-not-a"
+       (eval-formula many-worlds-logic {'a #{'A 'E}
+                                        'b #{'B 'E}
+                                        'c #{'C 'E}}
+                     (formula (not a)))
+       #{'B 'C 'D})
 
-;; (test? "many-worlds-a&c"
-;;        (eval-formula many-worlds-logic {'a #{'A 'E}
-;;                                         'b #{'B 'E}
-;;                                         'c #{'C 'E}}
-;;                      (formula (and a c)))
-;;        #{'E})
+(test? "many-worlds-a&c"
+       (eval-formula many-worlds-logic {'a #{'A 'E}
+                                        'b #{'B 'E}
+                                        'c #{'C 'E}}
+                     (formula (and a c)))
+       #{'E})
 
-;; (test? "many-worlds-implication-1"
-;;        (eval-formula many-worlds-logic {'a #{'A 'E}
-;;                                         'b #{'B 'E}
-;;                                         'c #{'C 'E}}
-;;                      (formula (-> a b)))
-;;        #{'B 'C 'D 'E})
+(test? "many-worlds-implication-1"
+       (eval-formula many-worlds-logic {'a #{'A 'E}
+                                        'b #{'B 'E}
+                                        'c #{'C 'E}}
+                     (formula (-> a b)))
+       #{'B 'C 'D 'E})
 
 
-;; (test? "many-worlds-implication-2"
-;;        (eval-formula many-worlds-logic {'a #{'A 'E}
-;;                                         'b #{'B 'E}
-;;                                         'c #{'C 'E}
-;;                                         'd #{'C 'D 'E}
-;;                                         }
-;;                      (formula (-> (or a d) (and b c))))
-;;        #{'B 'E})
+(test? "many-worlds-implication-2"
+       (eval-formula many-worlds-logic {'a #{'A 'E}
+                                        'b #{'B 'E}
+                                        'c #{'C 'E}
+                                        'd #{'C 'D 'E}}
+                     (formula (-> (or a d) (and b c))))
+       #{'B 'E})

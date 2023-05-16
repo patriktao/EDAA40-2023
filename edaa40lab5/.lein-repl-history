@@ -1,3 +1,7 @@
 (use 'edaa40.lab5 :reload)
 2A
 (use 'edaa40.lab5 :reload)
+ls
+(use 'edaa40.lab5 : reload) 
+lein test
+(use 'edaa40.lab5 : reload)
